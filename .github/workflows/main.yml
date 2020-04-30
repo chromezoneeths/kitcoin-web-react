@@ -17,8 +17,6 @@ jobs:
           node-version: 12
       - name: Install Node.js dependencies
         run: npm install
-      - name: Compile
-        run: gulp ci
       - name: Build
         run: docker build . --file Dockerfile.prod --tag docker.pkg.github.com/chromezoneeths/kitcoin-web-react/kitcoin-web-react:stable
       - uses: azure/docker-login@v1
